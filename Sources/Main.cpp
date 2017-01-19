@@ -1,5 +1,5 @@
 #include <iostream>
-#include <SFML/Graphics.hpp>
+#include "Display.h"
 
 using namespace std;
 
@@ -7,15 +7,15 @@ int main()
 {
     cout << "App started" << endl;
 
-    int width = 1280, height = 720; //Resolution.
 
-    sf::RenderWindow window(sf::VideoMode(width, height), "2d Engine");
-    window.setVerticalSyncEnabled(true);
 
-    sf::Font font;
+    Display::initialize();
+
+
+     sf::Font font;
     if(!font.loadFromFile("Fonts/LCD_Solid.ttf"))
     {
-        cout << "error" << endl;
+        std::cout << "error" << std::endl;
     }
 
     sf::Text text;
@@ -23,24 +23,19 @@ int main()
     text.setString("Ayy lmao");
     text.setCharacterSize(24);
     text.setColor(sf::Color::White);
-    text.setPosition(width/2,height/2);
+    text.setPosition(Display::width/2,Display::height/2);
 
-
-    while(window.isOpen())
+    while(Display::isOpen())
     {
-        sf::Event event;
-        while(window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+        Display::checkWindowEvents();
 
-        window.clear(sf::Color::Black);
+
+        Display::clear();
 
         // draw everything here...
         // window.draw(...);
-        window.draw(text);
-        window.display();
+        Display::draw(text);
+        Display::display();
     }
 
     return 0;
