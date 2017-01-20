@@ -402,3 +402,9 @@
 1484856434 c:\cppstudio\2dgame\sources\display.h
 	<SFML/Graphics.hpp>
 
+1484951191 source:c:\cppstudio\2dgame\sources\application.cpp
+	"Application.h"
+	"Display.h"
+
+1484950924 c:\cppstudio\2dgame\sources\application.h
+

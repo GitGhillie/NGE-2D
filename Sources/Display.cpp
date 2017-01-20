@@ -1,6 +1,5 @@
 #include "Display.h"
 #include <memory>
-#include <iostream>
 
 namespace Display
 {
