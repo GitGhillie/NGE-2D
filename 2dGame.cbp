@@ -49,8 +49,11 @@
 		<Linker>
 			<Add directory="C:/CppStudio/SFML-2.4.1/lib" />
 		</Linker>
+		<Unit filename="Sources/Application.cpp" />
+		<Unit filename="Sources/Application.h" />
+		<Unit filename="Sources/Display.cpp" />
+		<Unit filename="Sources/Display.h" />
 		<Unit filename="Sources/Main.cpp" />
-		<Unit filename="Sources/test.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
