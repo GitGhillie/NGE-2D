@@ -54,6 +54,8 @@
 		<Unit filename="Sources/Display.cpp" />
 		<Unit filename="Sources/Display.h" />
 		<Unit filename="Sources/Main.cpp" />
+		<Unit filename="Sources/States/Playing.cpp" />
+		<Unit filename="Sources/States/Playing.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

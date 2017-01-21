@@ -1,6 +1,8 @@
 #include "Application.h"
 #include "Display.h"
 #include <iostream>
+#include "SFML/System/Clock.hpp"
+#include "States/Playing.h"
 
 Application::Application()
 {
@@ -22,16 +24,27 @@ void Application::mainGameLoop()
     text.setColor(sf::Color::Red);
     text.setPosition(Display::width/2,Display::height/2);
 
+    sf::Clock clock;
+
+    float velY = 0.0f;
+    const float g = 9.81f;
+
     while(Display::isOpen())
     {
+        auto dt = clock.restart().asSeconds();
+
         Display::checkWindowEvents();
 
 
         Display::clear();
 
+        Playing::input();
+        velY += g * dt;
+        text.move(0,velY * dt);
+        Playing::draw(text);
         // draw everything here...
         // window.draw(...);
-        Display::draw(text);
+
         Display::display();
     }
 }

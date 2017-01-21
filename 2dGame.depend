@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1484856685 source:c:\cppstudio\2dgame\sources\main.cpp
+1484951505 source:c:\cppstudio\2dgame\sources\main.cpp
 	<iostream>
-	"Display.h"
+	"Application.h"
 
 1484581119 source:c:\cppstudio\2dgame\sources\test.cpp
 	<SFML/Graphics.hpp>
@@ -394,17 +394,29 @@
 	<string>
 	<vector>
 
-1484856603 source:c:\cppstudio\2dgame\sources\display.cpp
+1484951383 source:c:\cppstudio\2dgame\sources\display.cpp
 	"Display.h"
 	<memory>
-	<iostream>
 
 1484856434 c:\cppstudio\2dgame\sources\display.h
 	<SFML/Graphics.hpp>
 
-1484951191 source:c:\cppstudio\2dgame\sources\application.cpp
+1485034320 source:c:\cppstudio\2dgame\sources\application.cpp
 	"Application.h"
 	"Display.h"
+	<iostream>
+	"SFML/System/Clock.hpp"
+	"States/Playing.h"
 
 1484950924 c:\cppstudio\2dgame\sources\application.h
+
+1485034690 c:\cppstudio\2dgame\sources\states\playing.h
+	<SFML/Graphics.hpp>
+
+1485034690 source:c:\cppstudio\2dgame\sources\states\playing.cpp
+	"Playing.h"
+	"SFML/Graphics.hpp"
+	"math.h"
+	"../Display.h"
+	<iostream>
 
