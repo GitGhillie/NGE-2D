@@ -3,6 +3,7 @@
 #include <iostream>
 #include "SFML/System/Clock.hpp"
 #include "States/Playing.h"
+#include "SFML/Window/Keyboard.hpp"
 
 Application::Application()
 {
@@ -27,7 +28,7 @@ void Application::mainGameLoop()
     sf::Clock clock;
 
     float velY = 0.0f;
-    const float g = 9.81f;
+    const float g = 200.0f, resistance = 0.9f;
 
     while(Display::isOpen())
     {
@@ -38,9 +39,24 @@ void Application::mainGameLoop()
 
         Display::clear();
 
-        Playing::input();
-        velY += g * dt;
-        text.move(0,velY * dt);
+
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+        {
+            velY = -g;
+        }
+
+        if(text.getPosition().y < 1)
+        {
+            velY = 10;
+        }
+        if(text.getPosition().y > Display::height - 20)
+        {
+            velY = -40;
+        }
+
+        velY += g * dt * resistance;
+        text.move(0,(velY * dt));
+        std::cout << velY << std::endl; //Move this all into Playing.h functions.
         Playing::draw(text);
         // draw everything here...
         // window.draw(...);
