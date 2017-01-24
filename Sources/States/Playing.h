@@ -6,7 +6,7 @@
 namespace Playing
 {
     void input();
-    void update(float dt, sf::Text text);
+    void update(float dt, sf::Text* text);
     void draw(sf::Text text);
 }
 

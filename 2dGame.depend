@@ -401,19 +401,20 @@
 1484856434 c:\cppstudio\2dgame\sources\display.h
 	<SFML/Graphics.hpp>
 
-1485034320 source:c:\cppstudio\2dgame\sources\application.cpp
+1485275280 source:c:\cppstudio\2dgame\sources\application.cpp
 	"Application.h"
 	"Display.h"
 	<iostream>
 	"SFML/System/Clock.hpp"
 	"States/Playing.h"
+	"SFML/Window/Keyboard.hpp"
 
 1484950924 c:\cppstudio\2dgame\sources\application.h
 
-1485034690 c:\cppstudio\2dgame\sources\states\playing.h
+1485274588 c:\cppstudio\2dgame\sources\states\playing.h
 	<SFML/Graphics.hpp>
 
-1485034690 source:c:\cppstudio\2dgame\sources\states\playing.cpp
+1485275697 source:c:\cppstudio\2dgame\sources\states\playing.cpp
 	"Playing.h"
 	"SFML/Graphics.hpp"
 	"math.h"
