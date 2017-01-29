@@ -5,6 +5,8 @@
 #include "States/Playing.h"
 #include "SFML/Window/Keyboard.hpp"
 
+#include "Entity.h"
+
 Application::Application()
 {
     Display::initialize();
@@ -27,7 +29,8 @@ void Application::mainGameLoop()
 
     sf::Clock clock;
 
-
+    Entity player;
+    player.sprite.setPosition(Display::width/6, Display::height/3);
 
     while(Display::isOpen())
     {
@@ -36,12 +39,11 @@ void Application::mainGameLoop()
         Display::checkWindowEvents();
 
 
-
         Display::clear();
 
         Playing::input();
-        Playing::update(dt, &text);
-        Playing::draw(text);
+        Playing::update(dt, &player.sprite);
+        Playing::draw(text, player.sprite);
 
         Display::display();
     }

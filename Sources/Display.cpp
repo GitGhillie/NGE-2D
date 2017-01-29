@@ -25,9 +25,10 @@ namespace Display
         window->clear();
     }
 
-    void draw(sf::Text thing)
+    void draw(sf::Text thing, sf::Sprite sprite)
     {
         window->draw(thing);
+        window->draw(sprite);
     }
 
     void display()

@@ -1,34 +1,34 @@
 #include "Playing.h"
 
-#include "SFML/Graphics.hpp"
 #include "math.h"
 #include "../Display.h"
 #include <iostream>
 
+
 namespace Playing
 {
     float velY = 0.0f;
-    const float g = 200.0f, resistance = 0.9f;
 
     void input()
     {
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
         {
-            velY = -g;
+            velY = -g; //How does this work...
         }
+
     }
 
-    void update(float dt, sf::Text* text)
+    void update(float dt, sf::Sprite* player)
     {
 
 
-        if(text->getPosition().y < -24)
+        if(player->getPosition().y < -24)
         {
-            text->move(0,(Display::height));
+            player->move(0,(Display::height));
         }
-        if(text->getPosition().y > Display::height - 20)
+        if(player->getPosition().y > Display::height - 20)
         {
-            text->move(0,(-Display::height));
+            player->move(0,(-Display::height));
         }
         if(velY > 1000)
         {
@@ -36,13 +36,13 @@ namespace Playing
         }
 
         velY += g * dt * resistance;
-        text->move(0,(velY * dt));
-        std::cout << velY << std::endl;
+        player->move(0,(velY * dt));
+        //std::cout << velY << std::endl;
 
     }
 
-    void draw(sf::Text text)
+    void draw(sf::Text text,sf::Sprite sprite)
     {
-        Display::draw(text);
+        Display::draw(text, sprite);
     }
 }
