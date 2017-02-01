@@ -8,6 +8,7 @@ namespace Display
     {
         window = std::make_unique<sf::RenderWindow>(sf::VideoMode(width, height), "2d Engine");
         window->setVerticalSyncEnabled(true);
+
     }
 
     void checkWindowEvents()
@@ -20,9 +21,9 @@ namespace Display
         }
     }
 
-    void clear()
+    void clear(sf::Color color)
     {
-        window->clear();
+        window->clear(color);
     }
 
     void draw(sf::Text thing, sf::Sprite sprite)

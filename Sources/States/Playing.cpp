@@ -8,12 +8,20 @@
 namespace Playing
 {
     float velY = 0.0f;
+    bool isPressed = false;
+    sf::Event eventKey;
 
-    void input()
+    void input(sf::Sprite* player)
     {
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && isPressed == false)
         {
+            isPressed = true;
             velY = -g; //How does this work...
+            player->setRotation(-20);
+        }
+        if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+        {
+            isPressed = false;
         }
 
     }
@@ -22,13 +30,15 @@ namespace Playing
     {
 
 
-        if(player->getPosition().y < -24)
+        if(player->getPosition().y < -40)
         {
-            player->move(0,(Display::height));
+            player->setPosition(player->getPosition().x,Display::height / 3);
+            velY = 0;
         }
         if(player->getPosition().y > Display::height - 20)
         {
-            player->move(0,(-Display::height));
+            player->setPosition(player->getPosition().x,Display::height / 3);
+            velY = 0;
         }
         if(velY > 1000)
         {
@@ -37,8 +47,7 @@ namespace Playing
 
         velY += g * dt * resistance;
         player->move(0,(velY * dt));
-        //std::cout << velY << std::endl;
-
+        player->rotate(sin(velY / 1000 - g / 4));
     }
 
     void draw(sf::Text text,sf::Sprite sprite)

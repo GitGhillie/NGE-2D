@@ -8,7 +8,7 @@ Entity::Entity()
         std::cout << "Loading entity texture failed." << std::endl;
     }
     sprite.setTexture(texture);
-    texture.setSmooth(true);
+    //texture.setSmooth(true);
 }
 
 Entity::~Entity()

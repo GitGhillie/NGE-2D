@@ -31,6 +31,10 @@ void Application::mainGameLoop()
 
     Entity player;
     player.sprite.setPosition(Display::width/6, Display::height/3);
+    player.sprite.scale(2,2);
+    player.sprite.setOrigin(15,24);
+
+    sf::Color sky(204,255,255);
 
     while(Display::isOpen())
     {
@@ -39,9 +43,9 @@ void Application::mainGameLoop()
         Display::checkWindowEvents();
 
 
-        Display::clear();
+        Display::clear(sky);
 
-        Playing::input();
+        Playing::input(&player.sprite);
         Playing::update(dt, &player.sprite);
         Playing::draw(text, player.sprite);
 

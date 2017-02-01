@@ -5,7 +5,7 @@
 
 namespace Playing
 {
-    void input();
+    void input(sf::Sprite* player);
     void update(float dt, sf::Sprite* player);
     void draw(sf::Text text,sf::Sprite sprite);
 

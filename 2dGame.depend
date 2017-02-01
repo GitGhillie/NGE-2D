@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1485277658 source:c:\cppstudio\2dgame\sources\main.cpp
+1485716690 source:c:\cppstudio\2dgame\sources\main.cpp
 	<iostream>
 	"Application.h"
 
@@ -394,14 +394,14 @@
 	<string>
 	<vector>
 
-1485283437 source:c:\cppstudio\2dgame\sources\display.cpp
+1485990504 source:c:\cppstudio\2dgame\sources\display.cpp
 	"Display.h"
 	<memory>
 
-1485283437 c:\cppstudio\2dgame\sources\display.h
+1485990504 c:\cppstudio\2dgame\sources\display.h
 	<SFML/Graphics.hpp>
 
-1485711671 source:c:\cppstudio\2dgame\sources\application.cpp
+1485990504 source:c:\cppstudio\2dgame\sources\application.cpp
 	"Application.h"
 	"Display.h"
 	<iostream>
@@ -410,21 +410,21 @@
 	"SFML/Window/Keyboard.hpp"
 	"Entity.h"
 
-1484950924 c:\cppstudio\2dgame\sources\application.h
+1485716690 c:\cppstudio\2dgame\sources\application.h
 
-1485712071 c:\cppstudio\2dgame\sources\states\playing.h
+1485989399 c:\cppstudio\2dgame\sources\states\playing.h
 	<SFML/Graphics.hpp>
 
-1485712071 source:c:\cppstudio\2dgame\sources\states\playing.cpp
+1485991078 source:c:\cppstudio\2dgame\sources\states\playing.cpp
 	"Playing.h"
 	"math.h"
 	"../Display.h"
 	<iostream>
 
-1485712318 source:c:\cppstudio\2dgame\sources\entity.cpp
+1485718024 source:c:\cppstudio\2dgame\sources\entity.cpp
 	"Entity.h"
 	<iostream>
 
-1485711223 c:\cppstudio\2dgame\sources\entity.h
+1485716690 c:\cppstudio\2dgame\sources\entity.h
 	<SFML/Graphics.hpp>
 
