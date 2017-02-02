@@ -6,6 +6,7 @@
 #include "SFML/Window/Keyboard.hpp"
 
 #include "Entity.h"
+#include "Background.h"
 
 Application::Application()
 {
@@ -25,7 +26,7 @@ void Application::mainGameLoop()
     text.setString("Press Space");
     text.setCharacterSize(24);
     text.setColor(sf::Color::Red);
-    text.setPosition(Display::width/2,Display::height/2);
+    text.setPosition(Display::width - 200, 10);
 
     sf::Clock clock;
 
@@ -33,6 +34,11 @@ void Application::mainGameLoop()
     player.sprite.setPosition(Display::width/6, Display::height/3);
     player.sprite.scale(2,2);
     player.sprite.setOrigin(15,24);
+
+    Background ground1;
+    ground1.spriteBG.setOrigin(0,3818);
+    ground1.spriteBG.setPosition(0, Display::height - 100);
+
 
     sf::Color sky(204,255,255);
 
@@ -46,8 +52,12 @@ void Application::mainGameLoop()
         Display::clear(sky);
 
         Playing::input(&player.sprite);
-        Playing::update(dt, &player.sprite);
-        Playing::draw(text, player.sprite);
+        Playing::update(dt,
+                        &player.sprite,
+                        &ground1.spriteBG);
+        Playing::draw(text,
+                      player.sprite,
+                      ground1.spriteBG);
 
         Display::display();
     }

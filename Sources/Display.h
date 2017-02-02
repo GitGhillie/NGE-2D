@@ -8,7 +8,9 @@ namespace Display
     void initialize();
     void checkWindowEvents();
     void clear(sf::Color color);
-    void draw(sf::Text thing, sf::Sprite sprite);
+    void draw(sf::Text thing,
+              sf::Sprite sprite,
+              sf::Sprite ground1);
     void display();
     bool isOpen();
 

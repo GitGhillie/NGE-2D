@@ -394,14 +394,14 @@
 	<string>
 	<vector>
 
-1485990504 source:c:\cppstudio\2dgame\sources\display.cpp
+1486058324 source:c:\cppstudio\2dgame\sources\display.cpp
 	"Display.h"
 	<memory>
 
-1485990504 c:\cppstudio\2dgame\sources\display.h
+1486066253 c:\cppstudio\2dgame\sources\display.h
 	<SFML/Graphics.hpp>
 
-1485990504 source:c:\cppstudio\2dgame\sources\application.cpp
+1486066253 source:c:\cppstudio\2dgame\sources\application.cpp
 	"Application.h"
 	"Display.h"
 	<iostream>
@@ -409,22 +409,31 @@
 	"States/Playing.h"
 	"SFML/Window/Keyboard.hpp"
 	"Entity.h"
+	"Background.h"
 
 1485716690 c:\cppstudio\2dgame\sources\application.h
 
-1485989399 c:\cppstudio\2dgame\sources\states\playing.h
+1486066253 c:\cppstudio\2dgame\sources\states\playing.h
 	<SFML/Graphics.hpp>
 
-1485991078 source:c:\cppstudio\2dgame\sources\states\playing.cpp
+1486066394 source:c:\cppstudio\2dgame\sources\states\playing.cpp
 	"Playing.h"
 	"math.h"
 	"../Display.h"
 	<iostream>
+	"../Background.h"
 
-1485718024 source:c:\cppstudio\2dgame\sources\entity.cpp
+1486066329 source:c:\cppstudio\2dgame\sources\entity.cpp
 	"Entity.h"
 	<iostream>
 
 1485716690 c:\cppstudio\2dgame\sources\entity.h
 	<SFML/Graphics.hpp>
+
+1486058724 c:\cppstudio\2dgame\sources\background.h
+	<SFML/Graphics.hpp>
+
+1486066329 source:c:\cppstudio\2dgame\sources\background.cpp
+	"Background.h"
+	<iostream>
 

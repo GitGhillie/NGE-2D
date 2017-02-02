@@ -51,6 +51,8 @@
 		</Linker>
 		<Unit filename="Sources/Application.cpp" />
 		<Unit filename="Sources/Application.h" />
+		<Unit filename="Sources/Background.cpp" />
+		<Unit filename="Sources/Background.h" />
 		<Unit filename="Sources/Display.cpp" />
 		<Unit filename="Sources/Display.h" />
 		<Unit filename="Sources/Entity.cpp" />
